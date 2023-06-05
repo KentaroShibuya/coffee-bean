@@ -265,7 +265,8 @@ p{
   top: 50%;
   left: 50%; 
 
-  /* why do texts come to lower right area when No-transform is assigned?? */
+/* text containerが大きいのでtop/leftでは中心に来ない。transfor translateで調整 */
+/* translate(x, y) xはマイナスで左へ、yはマイナスで上へ移動 */
   transform: translate(-50%,-50%); 
 }
 
@@ -402,7 +403,7 @@ form h3::after {
   width: auto;
 }
 
-/* what is the meaning of []?? */
+/* [ ]は属性の絞り込み formの中のinputのtype属性でsubmitを持つもの */
 form input[type="submit"] {
   background-color: #c7a17a;
   font-weight: 700;
